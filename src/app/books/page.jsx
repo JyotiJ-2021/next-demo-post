@@ -55,7 +55,7 @@ const page = () => {
                           className={`${contentStyle.card} ${contentStyle.crd}`}
                         >
                           <h2>
-                            <Link href={`${item.url}/${crdUrl}`}>
+                            <Link href={`/content${item.url}/${crdUrl}`}>
                               <Image
                                 className={contentStyle.logo}
                                 src={item.image}
@@ -67,7 +67,7 @@ const page = () => {
                             </Link>
                           </h2>
                           <p className={contentStyle.title}>
-                            <Link href={`${item.url}/${crdUrl}`}>
+                            <Link href={`/content${item.url}/${crdUrl}`}>
                               {item.title}
                             </Link>
                             <MoreVertIcon

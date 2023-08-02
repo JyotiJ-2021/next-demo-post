@@ -14,7 +14,7 @@ import ContentModal from "@/components/ContentModal"
 const DetailLayout = () => {
   const router = usePathname()
   const pathParts = router.split("/")
-  const value = pathParts[3]
+  const value = pathParts[3] || pathParts[2]
   const [open, setOpen] = useState(false)
   const [shareTitle, setShareTitle] = useState("")
   const [shareUrl, setShareUrl] = useState("")
@@ -50,7 +50,7 @@ const DetailLayout = () => {
                         onClick={(e) => {
                           setOpen(true)
                           setShareTitle(data.title)
-                          setShareUrl(pathParts[1])
+                          setShareUrl(pathParts[2])
                         }}
                       />
                       {/* <MoreVertIcon onClick={(e) => setOpen(true)} /> */}

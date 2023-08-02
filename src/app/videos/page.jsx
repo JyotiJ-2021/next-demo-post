@@ -82,7 +82,10 @@ const VideoLayout = () => {
                     style={{ maxWidth: " 100%" }}
                     className={contentStyle.title}
                   >
-                    <Link href={`${item.url}/${crdUrl}`}> {item.title}</Link>
+                    <Link href={`/content${item.url}/${crdUrl}`}>
+                      {" "}
+                      {item.title}
+                    </Link>
                     <MoreVertIcon
                       className={styles.verticalIcon}
                       onClick={(e) => handleClick(e, item.title, "videos")}

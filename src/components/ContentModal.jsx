@@ -19,6 +19,7 @@ import {
 } from "next-share"
 import { EmailShareButton, EmailIcon } from "next-share"
 import { PinterestShareButton, PinterestIcon } from "next-share"
+import { ShareSocial } from "react-share-social"
 
 import { CopyToClipboard } from "react-copy-to-clipboard"
 // import { baseUrl } from "@/app/config"
@@ -45,7 +46,7 @@ export default function ContentModal({ open, setOpen, title, url }) {
   // console.log(pathname, searchParams, router)
   const base = window.location.origin
   const urlTitle = title.replace(/\s/g, "-").toLowerCase()
-  const shareUrl = `${base}/${url}/${urlTitle}`
+  const shareUrl = `${base}/content/${url}/${urlTitle}`
   return (
     <div>
       <Modal
@@ -70,6 +71,16 @@ export default function ContentModal({ open, setOpen, title, url }) {
             />
           </Typography>
 
+          {/* <ShareSocial
+            url={`${base}/${url}/${title}`}
+            socialTypes={[
+              "facebook",
+              "twitter",
+              "email",
+              "linkedin",
+              "whatsapp",
+            ]}
+          /> */}
           <FacebookShareButton
             url={shareUrl}
             hashtag={"#title"}
