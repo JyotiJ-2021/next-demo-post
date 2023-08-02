@@ -1,0 +1,93 @@
+.modal-wrapper {
+  width: 500px;
+  height: 600px;
+}
+
+.modal {
+  background: white;
+  height: 100%;
+  width: 100%;
+  border-radius: 15px;
+  padding: 15px;
+}
+
+.modal-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-body {
+  padding-top: 10px;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 25px;
+}
+
+.button {
+  font-size: 11px;
+  background: rgb(11, 89, 209);
+  margin: 20px 0px 0px;
+  cursor: pointer;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 4px 6px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  width: 80px;
+  padding: 8px 6px;
+  margin-left: 10px;
+}
+
+.button:hover {
+  background: rgb(29, 106, 221);
+}
+
+.footer {
+  bottom: 0;
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+  /* background: rgb(193 214 227); */
+  background: rgb(238 242 245);
+  font-size: 12px;
+  cursor: pointer;
+  margin-top: 40px;
+}
+
+.shareBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.shareBox p {
+  font-size: 11px;
+  color: grey;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 200px;
+}
+
+.link {
+  border: 1px solid lightgrey;
+  padding: 7px 6px;
+  border-radius: 5px;
+}
+
+@media (max-width: 992px) {
+  .footer {
+    position: fixed;
+  }
+}
