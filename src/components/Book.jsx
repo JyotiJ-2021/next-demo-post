@@ -86,7 +86,7 @@ export const Book = () => {
                 className={styles.card}
                 style={{ position: "relative" }}
               >
-                <Link href={`/content/books/${crdUrl}`}>
+                <Link href={`/books/${crdUrl}`}>
                   <h2>
                     <Image
                       className={`${styles.logo} `}
@@ -100,7 +100,7 @@ export const Book = () => {
                   </h2>
                 </Link>
                 <p className={styles.title}>
-                  <Link href={`/content/books/${crdUrl}`}> {item.title}</Link>
+                  <Link href={`/books/${crdUrl}`}> {item.title}</Link>
                   <MoreVertIcon
                     className={styles.verticalIcon}
                     onClick={(e) => handleClick(e, item.title, "books")}

@@ -102,10 +102,7 @@ const Video = () => {
                   />
                 </h2>
                 <p className={styles.title}>
-                  <Link href={`/content${item.url}/${crdUrl}`}>
-                    {" "}
-                    {item.title}
-                  </Link>
+                  <Link href={`${item.url}/${crdUrl}`}> {item.title}</Link>
                   <MoreVertIcon
                     className={styles.verticalIcon}
                     onClick={(e) => handleClick(e, item.title, "videos")}

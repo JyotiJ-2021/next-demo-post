@@ -68,7 +68,7 @@ const page = () => {
                             </h2>
                           </Link>
                           <p className={contentStyle.title}>
-                            <Link href={`/content${data.url}/${crdUrl}`}>
+                            <Link href={`${data.url}/${crdUrl}`}>
                               {item.title}
                             </Link>
                             <MoreVertIcon

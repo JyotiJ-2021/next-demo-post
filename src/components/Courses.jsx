@@ -87,7 +87,7 @@ export const Courses = () => {
                 className={styles.card}
                 style={{ position: "relative" }}
               >
-                <Link href={`/content/courses/${crdUrl}`}>
+                <Link href={`/courses/${crdUrl}`}>
                   <h2>
                     <Image
                       className={`${styles.logo} `}
@@ -101,7 +101,7 @@ export const Courses = () => {
                   </h2>
                 </Link>
                 <p className={styles.title}>
-                  <Link href={`/content/courses/${crdUrl}`}> {item.title}</Link>
+                  <Link href={`/courses/${crdUrl}`}> {item.title}</Link>
                   <MoreVertIcon
                     className={styles.verticalIcon}
                     onClick={(e) =>
