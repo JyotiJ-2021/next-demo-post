@@ -40,7 +40,7 @@ const page = () => {
           {Details.map((data, i) => {
             return (
               data.url === router && (
-                <div>
+                <div key={i}>
                   <div className={`${contentStyle.heading} `}>
                     <h2 className={contentStyle.spacing}>{data.heading}</h2>
                   </div>

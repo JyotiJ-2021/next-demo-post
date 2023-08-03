@@ -61,7 +61,7 @@ export const Navbar = () => {
               <Link href="/books">Books</Link>
             </li>
             <li className={navStyle.navbar__item} onClick={handleClick}>
-              <Link href="">
+              <Link href="/creators">
                 Creators <ArrowDropDownIcon />
               </Link>
             </li>

@@ -61,7 +61,7 @@ const ContentNav = () => {
               <Link href="/books">Books</Link>
             </li>
             <li className={contentStyle.navbar__item} onClick={handleClick}>
-              <Link href="">
+              <Link href="/creators">
                 {" "}
                 Creators <ArrowDropDownIcon />
               </Link>

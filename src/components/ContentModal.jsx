@@ -45,8 +45,13 @@ export default function ContentModal({ open, setOpen, title, url }) {
   // const router = useRouter()
   // console.log(pathname, searchParams, router)
   const base = window.location.origin
+  // console.log("location", window.location.origin)
+  // console.log("title", title)
   const urlTitle = title.replace(/\s/g, "-").toLowerCase()
+  // console.log("url ", url)
+  // console.log("urltile ", urlTitle)
   const shareUrl = `${base}/${url}/${urlTitle}`
+  // console.log("sharetile ", shareUrl)
   return (
     <div>
       <Modal
