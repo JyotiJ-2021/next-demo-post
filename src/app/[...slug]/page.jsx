@@ -1,4 +1,5 @@
 "use client"
+
 import React, { useState } from "react"
 import Image from "next/image"
 import contentStyle from "../styles/content.module.css"
@@ -118,3 +119,13 @@ const DetailLayout = () => {
 }
 
 export default DetailLayout
+
+export async function getStaticPaths() {
+  const paths = [
+    { params: { slug: [] } },
+    { params: { slug: ["careers"] } },
+    { params: { slug: ["jk"] } },
+  ]
+
+  return { paths, fallback: true }
+}
