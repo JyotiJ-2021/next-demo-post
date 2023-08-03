@@ -3,7 +3,6 @@ import React, { useState } from "react"
 import Image from "next/image"
 import contentStyle from "../styles/content.module.css"
 import styles from "../styles/page.module.css"
-import { Navbar } from "@/components/Navbar"
 import { Details } from "../utils/data/details"
 import ContentNav from "../../components/ContentNav"
 import { usePathname } from "next/navigation"
@@ -16,10 +15,15 @@ import Link from "next/link"
 import { Footer } from "@/components/Footer"
 import ContentModal from "@/components/ContentModal"
 
+import Modal from "@mui/material/Modal"
+import CloseIcon from "@mui/icons-material/Close"
+import { Typography } from "@mui/material"
 const page = () => {
   const router = usePathname()
   const [open, setOpen] = useState(false)
-
+  const [openVideo, setOpenVideo] = React.useState(false)
+  const [id, setId] = useState()
+  const [url, setUrl] = useState()
   const [anchorEl, setAnchorEl] = useState(null)
   const [shareTitle, setShareTitle] = useState("")
   const [shareUrl, setShareUrl] = useState("")
@@ -28,9 +32,16 @@ const page = () => {
     setShareTitle(value)
     setShareUrl(url)
   }
+  const handleClose = () => setOpenVideo(false)
+
+  const handleOpen = (Id, url) => {
+    setId(id)
+    setUrl(url)
+    setOpenVideo(true)
+  }
 
   const opens = Boolean(anchorEl)
-  const id = opens ? "simple-popper" : undefined
+  const ids = opens ? "simple-popper" : undefined
 
   return (
     <>
@@ -55,17 +66,17 @@ const page = () => {
                           key={item.id}
                           className={`${contentStyle.card} ${contentStyle.crd}`}
                         >
-                          <h2>
-                            <Link href={`${item.url}/${crdUrl}`}>
-                              <Image
-                                className={contentStyle.logo}
-                                src={item.image}
-                                alt="img"
-                                width={235}
-                                height={150}
-                                priority
-                              />
-                            </Link>
+                          <h2
+                            onClick={() => handleOpen(item.id, item.videoUrl)}
+                          >
+                            <Image
+                              className={styles.logo}
+                              src={item.image}
+                              alt="img"
+                              width={235}
+                              height={300}
+                              priority
+                            />
                           </h2>
                           <p className={contentStyle.title}>
                             <Link href={`${item.url}/${crdUrl}`}>
@@ -88,7 +99,7 @@ const page = () => {
             )
           })}
           {opens && <div className="bg-blur" onClick={handleClick}></div>}
-          <Popper id={id} open={opens} anchorEl={anchorEl}>
+          <Popper id={ids} open={opens} anchorEl={anchorEl}>
             <Box
               sx={{
                 border: 1,
@@ -108,6 +119,21 @@ const page = () => {
               Share
             </Box>
           </Popper>
+          <Modal
+            open={openVideo}
+            onClose={handleClose}
+            aria-labelledby="modal-modal-title"
+            aria-describedby="modal-modal-description"
+          >
+            <Box className={styles.modalBox}>
+              <Typography className={styles.modalHeader} onClick={handleClose}>
+                <CloseIcon style={{ background: "#fff" }} />
+              </Typography>
+              <video width="100%" height="100%" controls>
+                <source src={url} type="video/mp4" />
+              </video>
+            </Box>
+          </Modal>
           {open && (
             <ContentModal
               open={open}

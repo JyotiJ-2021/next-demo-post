@@ -26,13 +26,13 @@ export const content = [
     description:
       "The World Intellectual Property Organization (WIPO) is the global forum for intellectual property policy, services, information and cooperation.",
   },
-  {
-    id: 4,
-    url: "/education",
-    title: "Education",
-    videoUrl: "",
-    image: "/images/thumbnail4.jpeg",
-    description:
-      "Education socializes children into society by teaching cultural values and norms. It equips them with the skills needed to become productive members of society.",
-  },
+  // {
+  //   id: 4,
+  //   url: "/education",
+  //   title: "Education",
+  //   videoUrl: "",
+  //   image: "/images/thumbnail4.jpeg",
+  //   description:
+  //     "Education socializes children into society by teaching cultural values and norms. It equips them with the skills needed to become productive members of society.",
+  // },
 ]

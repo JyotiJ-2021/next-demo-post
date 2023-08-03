@@ -145,6 +145,31 @@ svg{
 
 .css-3bmhjh-MuiPaper-root-MuiPopover-paper, .css-1dmzujt{
   width:200px !important;
+      border: 1px solid #f3efef !important;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.css-wudn58{
+  /* width:150px  !important; */
+  padding: 8px 14px !important;
+  border: 1px solid #f3efef !important;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.css-nta15i, .css-1lgi49a-MuiSvgIcon-root{
+      margin-right: 15px !important;
+        color: #333 !important;
+}
+.css-wudn58:hover{
+  background: #ddd;
+}
+
+.css-wngklv, .css-1jyhzi5{
+  border: none !important;
+  z-index: 999;
+}
+.css-wngklv:focus,.css-1jyhzi5:focus{
+  border: none !important;
+  outline: none !important;
 }
 @media (prefers-color-scheme: dark) {
   html {

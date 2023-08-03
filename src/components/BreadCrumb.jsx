@@ -1,12 +1,9 @@
-import Breadcrumbs from "@mui/material/Breadcrumbs"
 import * as React from "react"
 import Link from "@mui/material/Link"
 import contentStyle from "../app/styles/content.module.css"
 import { usePathname } from "next/navigation"
-import ChevronRightIcon from "@mui/icons-material/ChevronRight"
-export default function BreadcrumbLayout({ title }) {
-  // const breadcrumb = title && title.replace("/", "")
 
+export default function BreadcrumbLayout({ title }) {
   const router = usePathname()
 
   var currentLink = ""

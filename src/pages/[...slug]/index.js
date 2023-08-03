@@ -13,7 +13,6 @@ import ContentModal from "@/components/ContentModal"
 const DetailLayout = () => {
   const router = usePathname()
   const pathParts = router && router.split("/")
-
   const value = pathParts && (pathParts[3] || pathParts[2])
   const [open, setOpen] = useState(false)
   const [shareTitle, setShareTitle] = useState("")
@@ -36,7 +35,6 @@ const DetailLayout = () => {
         <BreadcrumbLayout title={router} />
         <div className={`${contentStyle.boxes} ${contentStyle.box}`}>
           {DetailData.map((data, i) => {
-            // console.log(data)
             return (
               data.title.replace(/\s/g, "-").toLowerCase() == title && (
                 <div key={i} style={{ paddingBottom: "80px" }}>

@@ -33,25 +33,20 @@ const style = {
   transform: "translate(-50%, -50%)",
   width: 350,
   bgcolor: "background.paper",
-  border: "1px solid #fff",
+  border: "0px solid #fff",
   boxShadow: 24,
   p: 4,
 }
 
 export default function ContentModal({ open, setOpen, title, url }) {
   const [copied, setCopied] = useState("")
-  // const pathname = usePathname()
-  // const searchParams = useSearchParams()
-  // const router = useRouter()
-  // console.log(pathname, searchParams, router)
+
   const base = window.location.origin
-  // console.log("location", window.location.origin)
-  // console.log("title", title)
+
   const urlTitle = title.replace(/\s/g, "-").toLowerCase()
-  // console.log("url ", url)
-  // console.log("urltile ", urlTitle)
+
   const shareUrl = `${base}/${url}/${urlTitle}`
-  // console.log("sharetile ", shareUrl)
+
   return (
     <div>
       <Modal
